@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.hardware.vr.headtracking"
+        android:required="true" />
+
+    <application
+        android:label="VRTest"
+        android:hasCode="true">
+
+        <activity
+            android:name="android.app.NativeActivity"
+            android:exported="true"
+            android:label="VR CUBE | VR ENGINE"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:configChanges="
+                density
+                |keyboard
+                |keyboardHidden
+                |navigation
+                |orientation
+                |screenLayout
+                |screenSize
+                |uiMode">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="native-lib" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>
